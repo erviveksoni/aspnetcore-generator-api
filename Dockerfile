@@ -12,9 +12,9 @@ COPY . .
 
 #RUN ls -alR
 
+ENV TEAMCITY_PROJECT_NAME=fake
 RUN dotnet test tests/tests.csproj
 
-ENV TEAMCITY_PROJECT_NAME=fake
 RUN dotnet publish api/api.csproj -c release -o /publish
 
 ## RUNTIME IMAGE STAGE
