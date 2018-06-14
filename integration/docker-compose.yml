@@ -2,8 +2,6 @@ version: '3.4'
 
 services:
   generator:
-    build:
-      context: .
     image: my-registry:55000/gen:ci-12
     #ports:
       #- "8090:80"
