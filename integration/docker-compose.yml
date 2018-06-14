@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  generator:
+    build:
+      context: .
+    image: my-registry:55000/gen:ci-12
+    #ports:
+      #- "8090:80"
+  mail:
+    image: mailhog/mailhog
+    #ports:
+      #- "8025:8025"
+
+  integration:
+    image: my-registry:55000/gen:integration-10
+    build: .
